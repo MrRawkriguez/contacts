@@ -1,0 +1,120 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  background-color: white;
+}
+
+/* Step 1: Style the parent container for all contact cards */
+.contacts {
+  display: flex; /* Align items horizontally */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Add spacing inside the container */
+  background-color: #f9f9f9; /* Set a light background color */
+}
+
+/* Step 2: Define the styling for the individual contact card */
+.contact-card {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: left; /* Move Name, phone, and email to the left of the card */
+  max-width: 400px; /* Limit the card width for consistency */
+  padding: 20px; /* Add spacing inside the card */
+  background-color: #ffffff; /* Set a white background for the card */
+  border: 1px solid #e0e0e0; /* Add a light border around the card */
+  border-radius: 10px; /* Slightly round the card corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Step 3: Add hover effects for interactivity */
+.contact-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly when hovered */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
+}
+
+/* Step 4: Define the container for the image */
+.img-container {
+  width: 250px; /* Set a fixed width for the image container */
+  height: 200px; /* Set a fixed height for the image container */
+  overflow: hidden; /* Ensure the image doesn't exceed the container */
+  border-radius: 5px; /* Slightly round the container corners */
+}
+
+/* Step 5: Style the image inside the container */
+.contact-card-img {
+  width: 100%; /* Ensure the image covers the entire width of the container */
+  height: 100%; /* Ensure the image covers the entire height of the container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+/* Step 6: Style the container for the contact details */
+.info-container {
+  text-align: left; /* Align text to the left for readability */
+}
+
+/* Step 7: Style the name of the contact */
+.contact-card-name {
+  font-size: 1.5rem; /* Set a large font size for emphasis */
+  font-weight: bold; /* Make the name bold */
+  color: #333333; /* Use a dark color for strong contrast */
+  margin-bottom: 10px; /* Add spacing below the name */
+}
+
+/* Step 8: Style each information group (e.g., phone, email) */
+.info-group {
+  display: flex; /* Use flexbox to align icon and text horizontally */
+  align-items: center; /* Align items vertically in the center */
+  margin-bottom: 8px; /* Add spacing between groups */
+}
+
+/* Step 9: Style the icons in each information group */
+.info-group-icon {
+  width: 20px; /* Set a fixed width for the icons */
+  height: 20px; /* Set a fixed height for the icons */
+  margin-right: 10px; /* Add spacing between the icon and the text */
+}
+
+/* Step 10: Style the text inside the information group */
+.info-group p {
+  font-size: 1rem; /* Set a standard font size */
+  color: #555555; /* Use a subtle color for the text */
+  margin: 0; /* Remove default margins */
+}
+
+/* Step 11: Ensure email text wraps properly if it's too long */
+.contact-card-email {
+  word-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+/* Step 12: Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .contact-card {
+    max-width: 100%; /* Allow the card to take full width on smaller screens */
+  }
+}
+
+/* Step 13: Style the components container for two rows of two cards */
+.components {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+  grid-auto-rows: auto; /* Automatically determine the row height */
+  gap: 20px; /* Add spacing between rows and columns */
+  justify-content: center; /* Center the grid content */
+  padding: 20px; /* Add padding around the grid */
+  background-color: #f9f9f9; /* Match the background style */
+}
+
+/* Step 14: Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .components {
+    display: flex; /* Switch to flexbox for a single column */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+}
+
